@@ -1,5 +1,4 @@
-import requests
-
+from collections import Counter
 # def has_upper_case(string):
 #     return string.lower != string
 
@@ -844,7 +843,7 @@ import requests
 #             # expand horizontally
 #             str_line+=pixel*2
 #         #print(row)
-        
+
 #         #print(row)
 #         # expand verticaly
 #         output.extend([str_line,str_line])
@@ -858,9 +857,8 @@ import requests
 # show(enlarge(frame))
 
 
-
 # def transposed(matrix):
-    
+
 #     result_list=[]
 #     result=[]
 
@@ -868,20 +866,19 @@ import requests
 #         result_list=[]
 #         for j in range(len(matrix)):
 #             result_list.extend([matrix[j][i]])
-            
+
 #         result.append(result_list)
 #     for item in result:
 #         print(item)
 #     return result
 
-   
+
 #     result=[[matrix[i][j]for j in range(len(matrix))]
 #             for i in range(len(matrix[0]))]
 #     print(result)
 #     for item in result:
-#         print(item)    
-#     return result    
-    
+#         print(item)
+#     return result
 
 
 # m1=[[1,2],[4,6],[6,7]]
@@ -959,7 +956,7 @@ import requests
 #         print([])
 #     elif len(matrix[0])==1:
 #         print(matrix)
-#     else: 
+#     else:
 
 #         if len(matrix[0])%2==0:
 #             half_len=len(matrix[0])//2+1
@@ -1019,8 +1016,81 @@ import requests
 #     return s
 # print(hamming_weight(101))
 
+# def visualize(coins):
+#     coins=sorted(coins)
+#     print(coins)
+#     nom_list=[]
+#     # for coin in coins:
+#     #     if coin not in nom_list:
+#     #         nom_list.append(coin)
+#     c=Counter()
+#     for coin in coins:
+#         c[coin]+=1
+#     dict_coins=dict(c)
+#     print(dict_coins)
+#     list_coins=list(c)
+#     for key in dict_coins:
+#         #print(key)
+#         coin_list=[]
+#         coin_list.append(key)
+#         for i in range(0,dict_coins[key]):
+#             coin_list.append("₽₽")
+#         nom_list.append(coin_list)
+#     print(nom_list)
+#     for coin_list in nom_list:
+#         for coin in coin_list:
+#             print(coin)
 
-    
+
+#     return #nom_list
+
+# print(visualize((1,1,1,2,2,5,5,3,4)))
+
+
+# ab1=[1,2,3,4]
+# ab2=[5,6,7,8]
+# ab=zip(ab1,ab2)
+# print(list(ab))
+# import hexlet2
+# print(f"__name__ == '{__name__}'")
+
+# def compare_version(version1, version2):
+#     print(version1, version2)
+#     list_ver1 = version1.split('.')
+#     list_ver2 = version2.split('.')
+#     if list_ver1[0]>list_ver2[0]:
+#         return 1
+#     elif list_ver1[0]<list_ver2[0]:
+#         return -1
+#     elif len(list_ver1[1]) > len(list_ver2[1]):
+
+#         return 1
+#     elif len(list_ver1[1]) < len(list_ver2[1]):
+#         return -1
+#     if len(list_ver1[1]) == len(list_ver2[1]):
+#         # sum_list1=sum(list_ver1)
+#         # sum_list2=sum(list_ver2)
+#         sum_list1 = sum(int(i) for i in list_ver1[1])
+#         sum_list2 = sum(int(i) for i in list_ver2[1])
+#         print(sum_list1)
+#         print(sum_list2)
+#         if sum_list1 > sum_list2:
+#             return 1
+#         elif sum_list1 < sum_list2:
+#             return -1
+#         else:
+#             return 0
 
 
 
+# print(compare_version('3.2', '3.12'))
+
+# def compare_version(version1, version2):
+#     list_v1 = version1.split('.')
+#     list_v2 = version2.split('.')
+#     for i in range(len(list_v1)):
+#         if int(list_v1[i]) > int(list_v2[i]):
+#             return 1
+#         if int(list_v1[i]) < int(list_v2[i]):
+#             return -1
+#     return 0
